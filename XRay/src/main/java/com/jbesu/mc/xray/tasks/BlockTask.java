@@ -47,7 +47,7 @@ public class BlockTask extends Task {
         World world = player.getWorld();
         for (Block runningBlock : runningBlocks) {
             Location location = runningBlock.getLocation();
-            player.sendBlockChange(location, Bukkit.createBlockData(world.getBlockAt(location).getType()));
+            player.sendBlockChange(location, world.getBlockAt(location).getBlockData());
         }
     }
 }
