@@ -1,6 +1,6 @@
 # Server Side X-Ray Plugin
 
-[![Java CI](https://github.com/forewing/mc-xray-for-all/workflows/Java%20CI/badge.svg)](https://github.com/forewing/mc-xray-for-all/actions?query=workflow%3A%22Java+CI%22)
+[![Java CI](https://github.com/forewing/mc-xray/workflows/Java%20CI/badge.svg)](https://github.com/forewing/mc-xray/actions?query=workflow%3A%22Java+CI%22)
 
 Mining in Minecraft SUCKS, why not make it free for all players?
 
@@ -16,7 +16,7 @@ Mining in Minecraft SUCKS, why not make it free for all players?
 
 ## Install
 
-- Download it from [Java CI](https://github.com/forewing/mc-xray-for-all/actions?query=workflow%3A%22Java+CI%22+is%3Asuccess), latest version is recommended
+- Download it from [Java CI](https://github.com/forewing/mc-xray/actions?query=workflow%3A%22Java+CI%22+is%3Asuccess), latest version is recommended
 
   Or you can bulid it by yourself using JDK 1.8+ & Maven
 
