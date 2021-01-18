@@ -1,0 +1,8 @@
+main: com.jbesu.mc.xray.App
+name: XRay
+version: 1.16.5.0
+
+commands:
+  xray:
+    description: Toggle X-Ray
+    usage: /<command>
