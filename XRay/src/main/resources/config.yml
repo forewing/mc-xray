@@ -1,2 +1,24 @@
+# X-Ray mode, block/chunk (only block mode supported yet)
 mode: "block"
+
+# X-Ray radius, in chunks
 range: 2
+
+# Target blocks
+target:
+  # Do not remove 'AIR'
+  - AIR
+
+  - COAL_ORE
+  - REDSTONE_ORE
+  - IRON_ORE
+  - GOLD_ORE
+  - DIAMOND_ORE
+  - LAPIS_ORE
+  - EMERALD_ORE
+  - NETHER_GOLD_ORE
+  - NETHER_QUARTZ_ORE
+  - ANCIENT_DEBRIS
+  - WATER
+  - LAVA
+  - BEDROCK

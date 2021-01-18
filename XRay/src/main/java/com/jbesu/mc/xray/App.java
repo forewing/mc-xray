@@ -1,7 +1,9 @@
 package com.jbesu.mc.xray;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
@@ -27,20 +29,9 @@ public class App extends JavaPlugin {
     public Set<String> getTargetBlocks() {
         if (targetBlocks == null) {
             targetBlocks = new HashSet<>();
-            targetBlocks.add("AIR");
-            targetBlocks.add("COAL_ORE");
-            targetBlocks.add("REDSTONE_ORE");
-            targetBlocks.add("IRON_ORE");
-            targetBlocks.add("GOLD_ORE");
-            targetBlocks.add("DIAMOND_ORE");
-            targetBlocks.add("LAPIS_ORE");
-            targetBlocks.add("EMERALD_ORE");
-            targetBlocks.add("NETHER_GOLD_ORE");
-            targetBlocks.add("NETHER_QUARTZ_ORE");
-            targetBlocks.add("ANCIENT_DEBRIS");
-            targetBlocks.add("WATER");
-            targetBlocks.add("LAVA");
-            targetBlocks.add("BEDROCK");
+            for (String block : getConfig().getStringList("target")) {
+                targetBlocks.add(block);
+            }
         }
         return targetBlocks;
     }
@@ -53,8 +44,28 @@ public class App extends JavaPlugin {
 
     private void initConfig() {
         FileConfiguration config = getConfig();
+
         config.addDefault("mode", "block");
+
         config.addDefault("range", 2);
+
+        List<String> defaultTarget = new ArrayList<>();
+        defaultTarget.add("AIR");
+        defaultTarget.add("COAL_ORE");
+        defaultTarget.add("REDSTONE_ORE");
+        defaultTarget.add("IRON_ORE");
+        defaultTarget.add("GOLD_ORE");
+        defaultTarget.add("DIAMOND_ORE");
+        defaultTarget.add("LAPIS_ORE");
+        defaultTarget.add("EMERALD_ORE");
+        defaultTarget.add("NETHER_GOLD_ORE");
+        defaultTarget.add("NETHER_QUARTZ_ORE");
+        defaultTarget.add("ANCIENT_DEBRIS");
+        defaultTarget.add("WATER");
+        defaultTarget.add("LAVA");
+        defaultTarget.add("BEDROCK");
+        config.addDefault("target", defaultTarget);
+
         config.options().copyDefaults(true);
         saveDefaultConfig();
     }
